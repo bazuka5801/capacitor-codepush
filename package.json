@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-codepush",
+  "name": "@bazumax/capacitor-codepush",
   "version": "1.0.0",
   "description": "CodePush Plugin for Capacitor",
   "module": "dist/esm/index.js",
@@ -7,7 +7,7 @@
   "homepage": "https://github.com/mapiacompany/capacitor-codepush",
   "repository": "github:mapiacompany/capacitor-codepush",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "lint": "npm run prettier -- --check && npm run swiftlint -- lint",
@@ -29,7 +29,7 @@
   "author": "MAPIACOMPANY",
   "license": "MIT",
   "devDependencies": {
-    "@capacitor-community/http": "^1.0.0",
+    "@capacitor-community/http": "^1.4.1",
     "@capacitor/cli": "^3.0.0",
     "@capacitor/device": "^1.0.0",
     "@capacitor/dialog": "^1.0.0",
@@ -49,10 +49,10 @@
     "body-parser": "^1.19.0",
     "del": "^6.0.0",
     "express": "^4.17.1",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
     "gulp-tslint": "^8.1.4",
-    "gulp-typescript": "^5.0.1",
+    "gulp-typescript": "^2.12.2",
     "husky": "^4.3.8",
     "mkdirp": "^1.0.4",
     "mocha": "^8.2.1",
@@ -69,7 +69,6 @@
     "code-push": "^4.0.2"
   },
   "peerDependencies": {
-    "@capacitor-community/http": "^1.0.0",
     "@capacitor/core": "^3.0.0",
     "@capacitor/device": "^1.0.0",
     "@capacitor/dialog": "^1.0.0",
