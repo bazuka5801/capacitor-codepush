@@ -1,6 +1,6 @@
 {
   "name": "@bazumax/capacitor-codepush",
-  "version": "1.0.0",
+  "version": "1.0.0-dev.1",
   "description": "CodePush Plugin for Capacitor",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

@@ -169,7 +169,9 @@ var capacitorPlugin = (function (exports, acquisitionSdk, filesystem, core, http
                 if (yield FileUtil.directoryExists(destinationDir.directory, destinationDir.path)) {
                     const { files } = yield filesystem.Filesystem.readdir(sourceDir);
                     for (let i = 0; i < files.length; i++) {
-                        const file = files[i];
+                        // @capacitor/filesystem v4 returns object instead of string
+                        // @ts-expect-error
+                        const file = files[i].name;
                         if (ignoreList.includes(file))
                             continue;
                         const sourcePath = sourceDir.path + "/" + file;

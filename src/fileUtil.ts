@@ -72,6 +72,7 @@ export class FileUtil {
             const { files } = await Filesystem.readdir(sourceDir);
             for (let i = 0; i < files.length; i++) {
                 // @capacitor/filesystem v4 returns object instead of string
+                // @ts-expect-error
                 const file = files[i].name;
                 if (ignoreList.includes(file)) continue;
                 const sourcePath = sourceDir.path + "/" + file;
