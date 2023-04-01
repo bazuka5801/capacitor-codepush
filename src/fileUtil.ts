@@ -71,7 +71,8 @@ export class FileUtil {
         if (await FileUtil.directoryExists(destinationDir.directory, destinationDir.path)) {
             const { files } = await Filesystem.readdir(sourceDir);
             for (let i = 0; i < files.length; i++) {
-                const file = files[i];
+                // @capacitor/filesystem v4 returns object instead of string
+                const file = files[i].name;
                 if (ignoreList.includes(file)) continue;
                 const sourcePath = sourceDir.path + "/" + file;
                 const destPath = destinationDir.path + "/" + file;
